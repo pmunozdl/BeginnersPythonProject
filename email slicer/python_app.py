@@ -14,4 +14,5 @@ def main():
     print("Username: ", username)
     print("Domain: ", domain)
     print("Extension:", extension)
+#while True:  //repetir ejecución para introducir varios correos
 main() 
