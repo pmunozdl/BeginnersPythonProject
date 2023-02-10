@@ -23,8 +23,9 @@ def binary_search(list, element):
         else: #element > list[middle]
             start = middle + 1
     return -1
-
-my_list = [1,2,3,4,5,6,7,8,9]
-target = 4
+#añadir bucle para casos válidos
+list_length = input("Longitud lista: ")
+my_list = [input("Valor: ") for x in range(int(list_length))]
+target = input("target: ")
 
 binary_search(my_list, target)
