@@ -24,29 +24,25 @@ def binary_search(list, element):
             start = middle + 1
     return -1
 
-list_length = input("Longitud lista: ")
-my_list = [input("Valor: ") for x in range(int(list_length))]
-target = input("target: ")
-binary_search(my_list, target)
-
-#añadir bucle para casos válidos
-# def hola(): #anidar condiciones en la misma línea (ahorrar if else)
-#     list_length = input("Longitud lista: ") #me devuelve la longitud de la lista
-#     if list_length.isdigit() == True:
-#         my_list = [input("Valor: ") for x in range(int(list_length))]
-#         if my_list[0:list_length].isdigit(): #falla. Hay que comprobar que todos los elementos de la lista sean números
-#             target = input("target: ")
-#             if target.isdigit() == True:
-#                 binary_search(my_list, target)
-#             else:
-#                 print ("only numbers allowed")
-#                 hola()
-#         else:
-#                 print ("only numbers allowed")
-#                 hola()
-#     else:
-#         print ("only numbers allowed")
-#         hola()
+def validation(): #anidar condiciones en la misma línea (ahorrar if else)
+    list_length = input("Longitud lista: ") #me  devuelve la longitud de la lista
+    if list_length.isdigit() == True:
+        my_list = [input("Valor: ") for x in range(int(list_length))]
+        my_list2 = ''.join(my_list) #list to str
+        if my_list2.isdigit(): 
+            my_list3 = list(my_list2)
+            target = input("target: ")
+            if target.isdigit() == True:
+                binary_search(my_list3, target)
+            else:
+                print ("only numbers allowed")
+                validation()
+        else:
+                print ("only numbers allowed")
+                validation()
+    else:
+        print ("only numbers allowed")
+        validation()
     
     
-# hola()
+validation()
