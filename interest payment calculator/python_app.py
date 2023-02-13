@@ -1,6 +1,7 @@
 #collect the neccesary inputs: principal, apr, years
 #calculate the monthly payment
 #show to the user
+#to check: https://www.billin.net/simulador-prestamos-personales-calculadora
 
 def main():
     print("This is a monthly payment calculator")
