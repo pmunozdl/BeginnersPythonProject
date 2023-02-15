@@ -1,5 +1,5 @@
 #pip install forex-python
-#pip install easy-exchange-rates
+
 from forex_python.converter import CurrencyRates
 
 cr = CurrencyRates()
