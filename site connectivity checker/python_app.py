@@ -13,5 +13,5 @@ def main(url):
     print("the responde code was: ", response.getcode())
 
 print("this is a connectivity checker program")
-input_url = input("Input the url of the site you want to check: ")
+input_url = "www.gmail.com"
 main(input_url)
